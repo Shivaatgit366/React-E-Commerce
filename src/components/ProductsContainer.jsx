@@ -6,6 +6,7 @@ import { BsFillGridFill, BsList } from "react-icons/bs";
 const ProductsContainer = ({ products }) => {
   const totalProducts = products.length;
   const [layout, setLayout] = useState("grid");
+  console.log("ProductsContainer rendered");
 
   const setActiveStyles = (pattern) => {
     return `text-xl btn btn-circle btn-sm ${
