@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .align-element {
+    @apply mx-auto max-w-6xl px-8;
+  }
+}
+
+@layer components {
+  .diamond-left-bar {
+    @apply relative;
+  }
+  .diamond-left-bar::before {
+    content: "";
+    @apply absolute left-0 top-1/2 h-full w-px -translate-y-1/2 transform bg-[#d9d9d9];
+  }
+}
+
+@layer components {
+  .diamond-right-bar {
+    @apply relative;
+  }
+  .diamond-right-bar::after {
+    content: "";
+    @apply absolute right-0 top-1/2 h-full w-px -translate-y-1/2 transform bg-[#d9d9d9];
+  }
+}
+
+@layer components {
+  .diamond-bar-both {
+    @apply relative;
+  }
+  .diamond-bar-both::before {
+    content: "";
+    @apply absolute left-0 top-1/2 h-full w-px -translate-y-1/2 transform bg-[#d9d9d9];
+  }
+  .diamond-bar-both::after {
+    content: "";
+    @apply absolute right-0 top-1/2 h-full w-px -translate-y-1/2 transform bg-[#d9d9d9];
+  }
+}
